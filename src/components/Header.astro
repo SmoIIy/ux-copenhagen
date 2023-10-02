@@ -1,0 +1,51 @@
+---
+import '../style.css';
+import Button from './Button.astro';
+import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
+---
+
+<header>
+    <a href="/" class="logo">
+    <img src={logoplaceholder.src} alt="logo"></a>
+
+    <nav>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Previous Talks</a></li>
+        <Button href="#" body="Tickets" />
+      </ul>
+        
+    </nav>
+</header>
+
+<style>
+    header {
+        height: 100px;
+        background: linear-gradient(180deg, #021E38 0%, rgba(2, 30, 56, 0.63) 51.56%, rgba(2, 30, 56, 0.00) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .logo {
+        margin: 15px;
+    }
+    .logo img {
+        height: 65px;
+    }
+    nav {
+        width: 400px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    li {
+        list-style: none;
+    }
+    a:hover {
+        color: var(--accent-yellow);
+    }
+</style>

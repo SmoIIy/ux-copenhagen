@@ -1,0 +1,31 @@
+---
+import '../style.css'
+import 'animate.css'
+interface Props {
+    body: string;
+    href: string;
+}
+const { body,href } = Astro.props;
+---
+
+<a href={href} class="button">
+    {body}
+</a>
+
+<style>
+    .button {
+        display: inline-block;
+        border: 2px solid var(--accent-orange);
+        background-color: transparent;
+        padding: 0.3rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+        transition: all 250ms ease;
+    }
+    .button:hover {
+        background-color: var(--accent-orange);
+        animation: pulse;
+        animation-duration: 0.25s;
+
+    }
+</style>
