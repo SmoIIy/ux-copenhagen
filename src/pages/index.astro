@@ -20,9 +20,39 @@ const data = await response.json();
 	<Header> 
 
 	</Header>
+
 	<section class="cover">
-		<img src="/coverimage.png" alt="image of conference">
+		<img src="/coverimage.png" alt="image of conference" class="coverimage">
+		<div class="cover-container">
+			<h1><span class="highlight">UX Copenhagen</span> is Denmark’s most inspirational human experience conference!</h1>
+			<div class="theme-container">
+				<p>We will see you</p>
+				<h4>March 20th & 21th</h4>
+				<h1>20<span class="highlight">24</span></h1>
+				<br>
+				<p>This years theme</p>
+				<h1 id="theme">Degrowth & Consumerism</h1>
+			</div>
+		</div>
 	</section>
+
+	<section class="what-is">
+		<article>
+			<h3>What is <span class="highlight">UX Copenhagen</span></h3>
+			<p>Welcome to the UX Copenhagen conference – Denmark’s most inspirational human experience conference, covering subjects like user experience, content, strategy, and research under a new theme for each year.</p>
+			<p>We will present you with two days filled with superb content from 20+ local and international speakers, hands-on workshops, inspiration, networking, new knowledge, and new insights.</p>
+		</article>
+	</section>
+	<section>
+		<article class="theme-article">
+			<img src="/placeholderimage1.png" alt="">
+			<div id="theme-article">
+				<h3 class="highlight">This year’s theme</h3>
+				<p>Join UX Copenhagen 2024 as we explore 'Degrowth and Consumerism.' Discover the urgency of shifting away from relentless growth and consumption, addressing climate change, waste, and sustainable practices. Engage in discussions about the vital role of designers in driving lasting, systemic change.</p>
+			</div>
+		</article>
+	</section>
+
 	<section class="tickets">
 		{
 			data.map((thing)=> {
@@ -35,7 +65,11 @@ const data = await response.json();
 </Layout>
 
 <style>
+
 @media (min-width: 768px) {
+	section {
+		margin: 70px 0 ;
+	}
 	.tickets {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -44,11 +78,72 @@ const data = await response.json();
 		place-items: center;
 	}
 	.cover {
-		width: 100vw;
-	}
-	.cover img {
 		width: 100%;
+		position: relative;
+		top: 80px;
+		height: 120vh;
+
+	}
+	.cover-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin:  20px auto;
+		place-items: center;
+		max-width: 1280px;
+	}
+	.cover h1 {
+		z-index: 2;
+		place-self: grid;
+		line-height: normal;
+	}
+	.coverimage {
+		width: 100%;
+		position: absolute;
+		object-fit: cover;
+		z-index: 0;
+	}
+	.theme-container {
+		padding: 15px;
+		text-align: right;
+		grid-column: 2;
+		grid-row: 2;
+		z-index: 2;
+	}
+	.what-is {
+		position: relative;
+		min-height: 300px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 1280px;
+		margin: 0 auto;
+		z-index: 2;
+	}
+	.theme-article {
+		position: relative;
+		min-height: 300px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 1280px;
+		margin: 0 auto;
+		z-index: 2;
+		place-items: center;
+		gap: 50px;
+	}
+	.theme-article img {
+		place-self: center;
+		width: 80%;
 	}
 }	
+#theme {
+	color: rgba(8, 62, 113, 0.7);
+	font-size: 5vw;
+}
+#shape1 {
+	fill: linear-gradient(346deg, rgba(8, 58, 104, 0.00) 10.14%, rgba(27, 77, 122, 0.37) 23.71%, rgba(32, 98, 137, 0.84) 36.98%, rgba(97, 160, 189, 0.99) 61.42%, #7FB8CF 80.59%);
+	transform: rotate(-2.61deg);
+	position: relative;
+	z-index: 0;
+	width: 100%;
 
+}
 </style>
