@@ -20,6 +20,9 @@ const data = await response.json();
 	<Header> 
 
 	</Header>
+	<section class="cover">
+		<img src="/coverimage.png" alt="image of conference">
+	</section>
 	<section class="tickets">
 		{
 			data.map((thing)=> {
@@ -38,6 +41,13 @@ const data = await response.json();
 		grid-template-columns: repeat(3, 1fr);
 		max-width: 1280px;
 		margin:  20px auto;
+		place-items: center;
+	}
+	.cover {
+		width: 100vw;
+	}
+	.cover img {
+		width: 100%;
 	}
 }	
 
