@@ -1,0 +1,55 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import '../style.css'
+import Header from '../components/Header.astro';
+---
+<Layout title="UX Copenhagen - about">
+    
+    <Header> 
+    </Header>
+</Layout>
+<img class="watermark" src="/logo/UX_logo_hvid.svg" alt="">
+
+
+<div class="text">
+    <h2>Who are we</h2>
+    <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
+</div>
+<div class="text_grid">
+    <h2>Theme</h2>
+   <p>The theme for UX Copenhagen 2024 is: Degrowth and Consumerism.</p>
+   <p>For far too long, we have been living in a world that applauds and encourages continuous growth, expansion, selling, and manipulation. It’s a world of overproduction and overconsumption, but we’re running out of resources. Business as usual will not cut it anymore.</p>
+   <p>We'll delve into climate change, consumerism, waste, and the necessity of transitioning from harmful production and development. We'll explore the concept of degrowth, discuss the essential shift needed in consumerism for planetary survival, showcase our past sustainable projects, and initiate a dialogue on the role of designers in driving systemic, sustainable change.</p>
+</div>
+<div class="text">
+    <h2>Who are we</h2>
+   <p>We'll delve into climate change, consumerism, waste, and the necessity of transitioning from harmful production and development. We'll explore the concept of degrowth, discuss the essential shift needed in consumerism for planetary survival, showcase our past sustainable projects, and initiate a dialogue on the role of designers in driving systemic, sustainable change.</p>
+</div>
+<style>
+    .text{
+        margin: 6% 0% 0% 15%;
+    }
+    .text_grid{
+        margin: 6% 0% 0% 15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    p{
+        max-width: 30%;
+    }
+    .watermark{
+        position: absolute;
+        opacity: 5%;
+        overflow: hidden;
+        margin-left: -13%;
+        padding-right: 30%;
+        width: 80%;
+        margin-top: 14%;
+    }
+    img{
+        
+    }
+
+</style>
