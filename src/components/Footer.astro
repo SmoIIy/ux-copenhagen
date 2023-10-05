@@ -1,0 +1,194 @@
+---
+
+---
+
+<footer>
+    <section>
+        <h3>Interested in hearing more?</h3>
+        <p>Sign up for our newsletter and receive updates, news, and other exciting information about UX Copenhagen.</p>
+        <div class="container">
+            <div class="content">
+              <form class="subscription">
+                <input class="add-email" type="email" placeholder="Email..">
+                <button class="submit-email" type="button">
+                  <span class="before-submit">Subscribe</span>
+                  <span class="after-submit">Thank you for subscribing!</span>
+                 </button>
+              </form>
+            </div>
+          </div>
+    </section >
+
+    <section id="second">
+        <div class="row" id="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/#tickets">Ticket</a>
+        </div>
+        <div class="row" id="socials">
+            <img src="/icons/UX_fulllogo_farver.svg" alt="logo">
+            <div id="social-logos">
+                <a href="#">
+                    <img src="/icons/FacebookFilled.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="/icons/InstagramFilled.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="/icons/LinkedinFilled.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="/icons/TwitterSquareFilled.png" alt="">
+                </a>
+            </div>
+            <p>All Copyright Reserved</p>
+            <p>Terms and Policy</p>
+        </div>
+        <div class="row" id="contact">
+            <p><span class="icons"><img src="/icons/MailOutlined.png" alt=""> </span>  hello@uxcopenhagen.com</p>
+            <p><span class="icons"><img src="/icons/PhoneOutlined.png" alt=""> </span>  000 000 0000</p>
+            <p><span class="icons"><img src="/icons/HomeOutlined.png" alt=""> </span>  Danmark</p>
+        </div>
+    </section>
+</footer>
+<script>
+    document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    document.querySelector('.subscription').classList.add('done');
+    });
+</script>
+<style>
+    footer {
+        display: grid;
+        place-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    section {
+        text-align: center;
+        margin: 40px;
+        
+    }
+    #second {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        max-width: 1280px;
+        place-items: center;
+    }
+    #socials img {
+        width: 150px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+    #nav {
+        height: 50%;
+
+    }
+    #contact {
+        height: 50%;
+        text-align: left;
+    }
+    #socials {
+        min-height: 300px;
+    }
+    #social-logos img {
+        width: 36px;
+    }
+    a:hover {
+        color: var(--accent-yellow);
+    }
+    /* form */
+    .container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        margin: 15px 0;
+        width: 360px;
+        height: 40px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .subscription {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .subscription .add-email{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 20px;
+    }
+
+    .subscription .submit-email {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: calc(100% - 2px);
+        width: 100px;
+        border: none;
+        border-radius: 12px;
+        outline: none;
+        margin: 1px;
+        padding: 0 20px;
+        cursor: pointer;
+        background: var(--accent-orange);
+        color: #FFFFFF;
+        transition: all .35s ease-in-out:
+    }
+
+    .subscription.done .submit-email {
+        width: calc(100% - 2px);
+        background: var(--accent-orange);
+    }
+
+    .subscription .submit-email .before-submit,
+    .subscription .submit-email .after-submit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 38px;
+        transition: all .35s ease-in-out,
+
+    }
+
+    .subscription.done .submit-email .before-submit,
+    .subscription:not(.done) .submit-email .after-submit {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .subscription .submit-email .after-submit {
+        transition-delay: .35s;
+    }
+
+    .subscription:not(.done) .submit-email .before-submit,
+    .subscription.done .submit-email .after-submit {
+        visibility: visible;
+        opacity: 1;
+    }
+    </style>
