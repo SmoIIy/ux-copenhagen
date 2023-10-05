@@ -1,0 +1,153 @@
+
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import '../style.css'
+import Header from '../components/Header.astro';
+---
+
+<Layout title="UX Copenhagen - about">
+    
+    <Header> 
+    </Header>
+</Layout>
+<img class="watermark" src="/logo/UX_logo_hvid.svg" alt="">
+
+
+<div class="text">
+    <h2>Who are <span style="color: var(--accent-yellow)">we</span></h2>
+    <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
+</div>
+
+
+<div class="text">
+    <h2><span style="color: var(--accent-yellow)">Theme</span></h2>
+    <div class="text_grid">
+        <div>
+        <p>The theme for UX Copenhagen 2024 is: Degrowth and Consumerism.</p>
+        <p>For far too long, we have been living in a world that applauds and encourages continuous growth, expansion, selling, and manipulation. It’s a world of overproduction and overconsumption, but we’re running out of resources. Business as usual will not cut it anymore.</p>
+   
+        </div>
+   <p>We'll delve into climate change, consumerism, waste, and the necessity of transitioning from harmful production and development. We'll explore the concept of degrowth, discuss the essential shift needed in consumerism for planetary survival, showcase our past sustainable projects, and initiate a dialogue on the role of designers in driving systemic, sustainable change.</p>
+        </div>
+</div>
+
+
+
+
+<div class="text_box">
+    <h2>Who attends <span style="color: var(--accent-yellow)">UX Copenhagen?</span></h2>
+    <div class="text_grid">
+        <div>
+            <p>Everyone is welcome! This conference is not exclusively tailored for UX professionals and designers.</p>
+            <p>The talks are relevant to anyone working in tech, working with product design,
+            both digital and physical, people working with communication, and creatives of
+            all kinds.
+            </p>
+        </div>
+        <div>
+            <p>Our participants encompass a range of job titles, including:</p>
+            <div class="grid_1">
+                <ul>
+                <li>Design leaders</li>
+                <li>UX Designers</li>
+                <li>UX researchers</li>
+                <li>UX writers</li>
+                <li>Content strategists</li>
+                <li>Marketers</li>
+                <li>Web Entrepreneurs</li>
+            </ul>
+            <ul>
+                <li>Graphical Designers</li>
+                <li>Social Media Managers</li>
+                <li>Content Strategists</li>
+                <li>Content Creators</li>
+                <li>Software Developers</li>            
+            </ul>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<div class="box_grid">
+        <div class="box">
+        <p> The conference has about <span class="bolded">200 participants</span> of whom <span class="bolded">76%</span> are international.</p>
+        </div>
+
+        <div class="box">
+        <p> 25% are managers (UX Lead, Head of Design, Head of Software Development, etc.). </p>
+        </div>
+
+        <div class="box">
+        <p>50% of the audience are “UX Designers” (interaction designers, service designers, UI designers, content designers etc.) </p>
+        </div>
+
+        <div class="box">
+        <p>The rest are marketing folks, graphical designers, and other creatives. It’s a great networking event with a really wonderful crowd of participants and speakers.</p>
+        </div>
+</div>
+
+
+<style>
+    .text{
+        margin: 6% 0% 0% 15%;
+    }
+    .text_grid{
+        display: flex;
+        grid-template-rows: 1fr 1fr;
+        gap: 5%;
+    }
+
+    .text_box{
+        border-radius: 20px;
+        background: rgba(94, 138, 163, 0.40);
+        box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
+        padding: 6% 15% 5% 15%;
+    }
+
+    .box{
+        border-radius: 18px;
+        background: rgba(94, 138, 163, 0.40);
+        box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
+        padding: 10%
+    }
+
+    p{
+        max-width: 380px;
+    }
+
+    ul{
+        color: white;
+        list-style-type: disc;
+    }
+   
+    .watermark{
+        position: absolute;
+        opacity: 5%;
+        overflow: hidden;
+        margin-left: -13%;
+        padding-right: 30%;
+        width: 80%;
+        margin-top: 14%;
+    }
+
+    .bolded{
+        font-weight: bold;
+    }
+
+    .grid_1{
+        display:flex; 
+    }
+
+    .grid_2{
+        display: grid;
+    }
+
+    .box_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+        margin-top: 5%
+    }
+
+</style>
