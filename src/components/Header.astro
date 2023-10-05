@@ -1,12 +1,12 @@
 ---
 import '../style.css';
 import Button from './Button.astro';
-import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
+import logo from '../../public/Logo/UX_fulllogo_farver.svg';
 ---
 
 <header>
     <a href="/" class="logo">
-    <img src={logoplaceholder.src} alt="logo"></a>
+    <img src={logo.src} alt="logo"></a>
 
     <nav>
       <ul>
@@ -31,10 +31,10 @@ import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
         margin: 15px;
     }
     .logo img {
-        height: 65px;
+        height: 60px;
     }
     nav {
-        width: 400px;
+        width: 700px;
     }
     ul {
         display: flex;
@@ -47,6 +47,7 @@ import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
     }
     a {
         transition: all 350ms ease;
+        font-size: 14px;
     }
     a:hover {
         color: var(--accent-yellow);
