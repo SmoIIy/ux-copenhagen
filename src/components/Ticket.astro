@@ -2,31 +2,31 @@
 import '../style.css';
 import Button from "./Button.astro";
 import illustration from '../../src/assets/images/placeholderimage1.png';
+
+const {data} = Astro.props;
+console.log(data)
 ---
 
 <div class="ticket">
-    <div class="badge">Best Value!</div>
-    <img src={illustration.src} alt="illustration">
-    <h2 class="title">Full event ticket</h2>
-    <h4 class="subtitle">On-site - ticket information</h4>
-    <div class="body">
-        <p>Join us live* in Copenhagen! This ticket includes:</p>
-        <ul>
-            <li>Live and online talks, workshops, panel discussions, and Round Table sessions (Mar 20-21)</li>
-            <li>Access to the Speakers’ Dinner on day 1, March 20</li>
-            <li>A fun pre-conference event (1-2 hours, late afternoon) on March 19</li>
-            <li>Full access to the live-stream for 3 months after the event</li>
-            <li>Food and drinks during the conference (Mar 20-21)</li>
-            <li>Merchandise and conference goodies</li>
-        </ul>
+
+    {data.badge && <div class="badge">{data.badge}</div>}
+    <div class="top">
+        <img src={illustration.src} alt="illustration">
+        <h2 class="title">{data.title}</h2>
+        <h4 class="subtitle">{data.subtitle}</h4>
+    </div>
+    <div set:html={data.content} class="body"> 
+
     </div>
     <div class="bottom">
         <h4 class="price">
-            DKK: 6499,-
+            DKK: {data.price}
         </h4>
         <Button href="#" variant="filled">Buy</Button>
     </div>
 </div>
+
+
 
 <style>
     .ticket {
@@ -39,7 +39,7 @@ import illustration from '../../src/assets/images/placeholderimage1.png';
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-between;
         padding: 20px;
         color: white
     }
@@ -54,8 +54,8 @@ import illustration from '../../src/assets/images/placeholderimage1.png';
         width: 125px;
         aspect-ratio: 1/1;
     }
-    p, li {
-        font-size: 13px;
+    body {
+        font-size: 14px;
         font-weight: 300;
     }
     .bottom {

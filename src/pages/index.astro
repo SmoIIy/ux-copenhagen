@@ -5,15 +5,40 @@ import Button from '../components/Button.astro';
 import '../style.css'
 import Header from '../components/Header.astro';
 import Ticket from '../components/Ticket.astro';
+const response = await fetch("https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/uxcopenhagen", {
+	method: "GET",
+	headers: {
+	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc"
+	},
+}
+);
+const data = await response.json();
+//console.log(data);
 ---
 
 <Layout title="UX Copenhagen">
 	<Header> 
 
 	</Header>
-	<Ticket/>
+	<section class="tickets">
+		{
+			data.map((thing)=> {
+				return <Ticket data={thing} />
+			})
+		}
+	
+	</section>
+	
 </Layout>
 
 <style>
+@media (min-width: 768px) {
+	.tickets {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 1280px;
+		margin:  20px auto;
+	}
+}	
 
 </style>
