@@ -1,12 +1,12 @@
 ---
 import '../style.css';
 import Button from './Button.astro';
-import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
+
 ---
 
 <header>
     <a href="/" class="logo">
-    <img src={logoplaceholder.src} alt="logo"></a>
+    <img src=/icons/UX_fulllogo_farver.svg alt="logo"></a>
 
     <nav>
       <ul>
@@ -20,12 +20,16 @@ import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
 
 <style>
     header {
+        position: absolute;
+        top: 0;
+        width: 100%;
         height: 100px;
         background: linear-gradient(180deg, #021E38 0%, rgba(2, 30, 56, 0.63) 51.56%, rgba(2, 30, 56, 0.00) 100%);
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: 0 auto;
+        z-index: 2;
 
     }
     .logo {
@@ -45,6 +49,7 @@ import logoplaceholder from '../../src/assets/images/logoplaceholder.png';
     }
     li {
         list-style: none;
+        font-size: 15px;
     }
     a {
         transition: all 350ms ease;
