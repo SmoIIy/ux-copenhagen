@@ -1,11 +1,11 @@
 
+
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import '../style.css'
 import Header from '../components/Header.astro';
 ---
-
 <Layout title="UX Copenhagen - about">
     
     <Header> 
@@ -13,15 +13,13 @@ import Header from '../components/Header.astro';
 </Layout>
 <img class="watermark" src="/logo/UX_logo_hvid.svg" alt="">
 
-
 <div class="text">
-    <h2>Who are <span class="highlight">we</span></h2>
+    <h3>Who are <span class="highlight">we</span></h3>
     <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
 </div>
 
-
 <div class="text">
-    <h2><span class="highlight">Theme</span></h2>
+    <h3><span class="highlight">Theme</span></h3>
     <div class="text_grid">
         <div>
         <p>The theme for UX Copenhagen 2024 is: Degrowth and Consumerism.</p>
@@ -34,9 +32,8 @@ import Header from '../components/Header.astro';
 
 
 
-
 <div class="text_box">
-    <h2>Who attends <span class="highlight">UX Copenhagen?</span></h2>
+    <h3>Who attends <span class="highlight">UX Copenhagen?</span></h3>
     <div class="text_grid">
         <div>
             <p>Everyone is welcome! This conference is not exclusively tailored for UX professionals and designers.</p>
@@ -55,9 +52,9 @@ import Header from '../components/Header.astro';
                 <li>UX writers</li>
                 <li>Content strategists</li>
                 <li>Marketers</li>
-                <li>Web Entrepreneurs</li>
             </ul>
             <ul>
+                <li>Web Entrepreneurs</li>
                 <li>Graphical Designers</li>
                 <li>Social Media Managers</li>
                 <li>Content Strategists</li>
@@ -68,54 +65,68 @@ import Header from '../components/Header.astro';
         </div>
     </div>
  </div>
-
 <div class="box_grid">
         <div class="box">
-        <p> The conference has about <span class="bolded">200 participants</span> of whom <span class="bolded">76%</span> are international.</p>
+        <p> The conference has about <strong>200 participants</strong> of whom <strong>76%</strong> are international.</p>
         </div>
-
         <div class="box">
-        <p> 25% are managers (UX Lead, Head of Design, Head of Software Development, etc.). </p>
+        <p> <strong>25%</strong> are managers (UX Lead, Head of Design, Head of Software Development, etc.). </p>
         </div>
-
         <div class="box">
         <p>50% of the audience are “UX Designers” (interaction designers, service designers, UI designers, content designers etc.) </p>
         </div>
-
         <div class="box">
         <p>The rest are marketing folks, graphical designers, and other creatives. It's a great networking event with a really wonderful crowd of participants and speakers.</p>
         </div>
 </div>
+<div class="text">
+    <h3>Online<span class="highlight"> networking</span> and <span class="highlight">interaction</span></h3>
+    <div class="text_grid">
+        <div>
+        <p>Online networking and interaction
+            We’re doing everything we can to support networking during our virtual events.  </p>
+        <p> <strong>ROUND TABLE SESSIONS</strong> – Intimate online rooms with few participants. Get to know the speakers!
+            Most of this year’s speakers, along with a number of previous speakers, will be hosting small 1-hour group sessions with only 6-8 participants.</p> 
+        </div>
+        <div>
+        <p><strong>CHATROOMS WITH SOME OF OUR SPONSORS AND PARTNERS</strong>– Hop in for some networking and fun activities during our breaks!
+            Some of our partners will be hosting chatrooms and virtual “booths” with different activities for you to take part in during our breaks. Check out a demo of their products, join in on raffles and other give-aways, and network with other conference participants.
+        </p>  
+        <p>In 2020, we also started a new initiative: a series of conversations with what we call “Conversations with UX Copenhagen”.</p>
+        </div>
+</div>
+
+
+
+
 
 
 <style>
     .text{
-        margin: 6% 0% 0% 15%;
+        margin: 10% 0% 0% 15%;
     }
     .text_grid{
         display: flex;
         grid-template-rows: 1fr 1fr;
         gap: 5%;
+        margin-bottom: 5%;
     }
-
     .text_box{
         border-radius: 20px;
         background: rgba(94, 138, 163, 0.40);
         box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
-        padding: 6% 15% 5% 15%;
+        padding: 6% 15% 5% 15%;   
     }
-
     .box{
         border-radius: 18px;
-        background: rgba(94, 138, 163, 0.40);
+        background: rgba(245, 244, 239, 0.615);
         box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
-        padding: 10%
+        padding: 10%;
+        margin: 5% 7% 0% 7%;
     }
-
     p{
         max-width: 380px;
     }
-
     ul{
         color: white;
         list-style-type: disc;
@@ -131,23 +142,16 @@ import Header from '../components/Header.astro';
         margin-top: 14%;
     }
 
-    .bolded{
-        font-weight: bold;
-    }
-
     .grid_1{
         display:flex; 
     }
-
     .grid_2{
         display: grid;
     }
-
     .box_grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5%;
-        margin-top: 5%
+        margin: 5% 18% 5% 18%;
     }
-
-</style>
+    </style>
