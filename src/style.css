@@ -1,39 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --accent-orange: #E3853B;
-    --accent-yellow: #ECB043;
-    --main-blue: #1A3E5A;
-    --accent-blue: #5A9DBA;
-    --accent-blue-light: #B1DCEC;
+  --accent-orange: #e3853b;
+  --accent-yellow: #ecb043;
+  --main-blue: #1a3e5a;
+  --accent-blue: #5a9dba;
+  --accent-blue-light: #b1dcec;
 
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Heebo', sans-serif;
-    padding: 0;
-    margin: 0;
-
-    
+  font-family: "Heebo", sans-serif;
+  padding: 0;
+  margin: 0;
 }
-a, h1, h2, h3, h4, h5, p, li{
-    text-decoration: none;
-    color: white;
-    margin: 0;
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li {
+  text-decoration: none;
+  color: white;
+  margin: 0;
 }
 
 .highlight {
-    color: var(--accent-yellow);
+  color: var(--accent-yellow);
 }
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
 h3 {
-    font-size: 2vw;
+  font-size: 2vw;
+  margin-bottom: 1%;
 }
 
 h1 {
-    font-size: 3vw;
+  font-size: 3vw;
 }
