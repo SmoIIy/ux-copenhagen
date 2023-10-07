@@ -1,0 +1,22 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/uxcopenhagen", {
+	method: "GET",
+	headers: {
+	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc"
+	},
+}).then(response => response.json());
+
+  return data.map((post) => {
+    return {
+      params: { url: post.url },
+      props: { post },
+    };
+  });
+}
+
+const { post } = Astro.props;
+console.log(post);
+
+---
