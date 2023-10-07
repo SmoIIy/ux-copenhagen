@@ -10,12 +10,13 @@ export async function getStaticPaths() {
 
   return data.map((post) => {
     return {
-      params: { id: post.id },
+      params: { url: post.url },
       props: { post },
     };
   });
 }
 
-
+const { post } = Astro.props;
+console.log(post);
 
 ---
