@@ -8,15 +8,15 @@ export async function getStaticPaths() {
 	},
 }).then(response => response.json());
 
-  return data.map((post) => {
+  return data.map((ticket) => {
     return {
-      params: { url: post.url },
-      props: { post },
+      params: { ticketurl: ticket.ticketurl },
+      props: { ticket },
     };
   });
 }
 
-const { post } = Astro.props;
-console.log(post);
+const { ticket } = Astro.props;
+console.log(ticket);
 
 ---

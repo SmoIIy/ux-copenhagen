@@ -4,7 +4,7 @@ import Button from "./Button.astro";
 import illustration from '../../src/assets/images/placeholderimage1.png';
 
 const {data} = Astro.props;
-console.log(data)
+//console.log(data)
 ---
 
 <div class="ticket">
@@ -22,7 +22,7 @@ console.log(data)
         <h4 class="price">
             DKK: {data.price}
         </h4>
-        <Button href={`tickets/${data.url}`} variant="filled">Buy</Button>
+        <Button href={`tickets/${data.ticketurl}`} variant="filled">Buy</Button>
     </div>
 </div>
 
