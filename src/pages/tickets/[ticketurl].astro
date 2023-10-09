@@ -24,6 +24,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Ticketmain from '../../components/Ticketmain.astro';
+import Button from '../../components/Button.astro';
 ---
 
 
@@ -38,7 +39,25 @@ import Ticketmain from '../../components/Ticketmain.astro';
     <article class="row">
       <Ticketmain data={data}/>
     </article>
-    <article class="row"></article>
+    <article class="row">
+		<h1><span class="highlight">UX Copenhagen 2024 </span>“Consumerism & Degrowth”: Full event ticket</h1>
+		<div class="ticket-body">
+			<h4>Tickets include:</h4>
+			<ul>
+				<li>Full access to the recording of the 2023 conference</li>
+				<li>Access to all talks </li>
+				<li>Q&A sessions </li>
+				<li>Recordings of 2-3 of the workshops for a discounted price</li>
+			</ul>
+			<p>Please note that the livestream ticket is not refundable</p>
+		</div>
+		<div class="price-and-pay">
+			<p>Price:</p>
+			<p>6499,-</p>
+			<form action=""></form>
+			<Button href="#" variant="filled">Add to Card</Button>
+		</div>
+	</article>
   </section>
 
   <section class="desc-container">
@@ -59,9 +78,34 @@ import Ticketmain from '../../components/Ticketmain.astro';
 </Layout>
 
 <style>
-  @media screen (min-width: 768px ) {
-   .ticket-container {
-    display: grid;
+@media (min-width: 768px) {
+   	.ticket-container {
+		position: relative;
+		top: 120px;
+    	display: grid;  
+		max-width: 1280px;
+		margin: 0 auto;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+	
+   }
+    .row {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 15px
+
+   }
+   	.price-and-pay {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		place-self: center;
+   }
+   .price-and-pay > * {
+		margin: 5px;
    }
   }
 </style>
