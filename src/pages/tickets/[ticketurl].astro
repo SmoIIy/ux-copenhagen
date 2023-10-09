@@ -23,25 +23,33 @@ import Ticket from "../../components/Ticket.astro";
 import Layout from "../../layouts/Layout.astro";
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Ticketmain from '../../components/Ticketmain.astro';
 ---
+
+
+
+
+
+
+
 <Layout title={data.title}>
   <Header />
-  <div class="ticket-container">
+  <section class="ticket-container">
     <article class="row">
-      <Ticket data={data}/>
+      <Ticketmain data={data}/>
     </article>
     <article class="row"></article>
-  </div>
+  </section>
 
-  <div class="desc-container">
+  <section class="desc-container">
     <div id="desc-container-left"></div>
     <div id="disc-container-right"></div>
-  </div>
+  </section>
 
-  <div class="pricing">
+  <section class="pricing">
     <div class="pricing-container"></div>
     <div class="terms"></div>
-  </div>
+  </section>
 
   {
     [data].map((data)=> {
@@ -51,5 +59,9 @@ import Footer from '../../components/Footer.astro';
 </Layout>
 
 <style>
-
+  @media screen (min-width: 768px ) {
+   .ticket-container {
+    display: grid;
+   }
+  }
 </style>
