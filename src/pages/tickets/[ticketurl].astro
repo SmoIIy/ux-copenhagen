@@ -19,4 +19,22 @@ export async function getStaticPaths() {
 const { ticket } = Astro.props;
 console.log(ticket);
 
+import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
+<Layout title={ticket.title}>
+  <div class="ticket-container">
+    <article class="row"></article>
+    <article class="row"></article>
+  </div>
+  
+  <div class="desc-container">
+    <div id="desc-container-left"></div>
+    <div id="disc-container-right"></div>
+  </div>
+  
+  <div class="pricing">
+    <div class="pricing-container"></div>
+    <div class="terms"></div>
+  </div>
+</Layout>
