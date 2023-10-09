@@ -53,7 +53,7 @@ import Button from '../../components/Button.astro';
 		</div>
 		<div class="price-and-pay">
 			<p>Price:</p>
-			<p>6499,-</p>
+			<p>{data.price}</p>
 			<form action=""></form>
 			<Button href="#" variant="filled">Add to Card</Button>
 		</div>
@@ -61,30 +61,58 @@ import Button from '../../components/Button.astro';
   </section>
 
   <section class="desc-container">
-    <div id="desc-container-left"></div>
-    <div id="disc-container-right"></div>
+    <div id="desc-container-left">
+		<h2>Description</h2>
+		<p>
+			This ticket is for joining us live in Copenhagen on March 20-21, 2024. There will be an excellent line-up of live and online speakers; live Q&A sessions; 2-3 hands-on workshops to choose from each day; live and online Round Table sessions with current and previous speakers; food, drinks, and snacks throughout both days; a goodie-bag; access to our groups on Slack and other social media platforms; and access to the full recording of the live-stream for three months after the event (until June 30, 2024).
+			This ticket also includes access to some of the events surrounding the conference (to be announced later), and our dinner party on Wednesday, March 20th.
+			</p>
+	</div>
+    <div id="disc-container-right">
+		<p>For 2024, our presenters will be exploring the topic of “Consumerism & Degrowth”. There will be talks on new ways of farming like urban agriculture, new shopping experiences, designing for “The Third Age”/ageism, and sustainability.
+
+			Our speakers and our participants are a fantastic mixture of international and local UX and design experts, marketing professionals, digital managers, designers, innovators, strategists, researchers, and others curious about the field. Join us for two days filled with interaction, inspiration, networking, and new knowledge and insights.
+			
+			If you have any questions, please reach out to hello@uxcopenhagen.com.</p>
+	</div>
+
   </section>
 
   <section class="pricing">
-    <div class="pricing-container"></div>
-    <div class="terms"></div>
+    <div class="pricing-container">
+		<p>Pricing: <br>
+		Early Bird: September 1 - November 15
+		Regular price: November 16 - January 31
+		Late Bird: (does not apply to live-stream tickets)
+		</p>
+	</div>
+    
   </section>
-
+  	<div class="terms">
+		<p>*Rules apply, please refer to our Terms & Conditions: https://uxcopenhagen.com/terms-and-conditions.</p>
+	</div>
+<!-- 
   {
     [data].map((data)=> {
       return <Ticket data={data} />
     })
-  }
+  } 
+  -->
+  <Footer />
 </Layout>
 
 <style>
+	:root {
+		--from-top: 160px;
+	}
+	
 @media (min-width: 768px) {
    	.ticket-container {
 		position: relative;
-		top: 120px;
     	display: grid;  
 		max-width: 1280px;
-		margin: 0 auto;
+		margin: auto;
+		margin-top: var(--from-top);
 		grid-template-columns: 1fr 1fr;
 		place-items: center;
 	
@@ -94,18 +122,48 @@ import Button from '../../components/Button.astro';
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
-		padding: 15px
+		padding: 15px;
+
 
    }
    	.price-and-pay {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		place-self: center;
+		place-self: left;
+		margin-left: 40px;
    }
    .price-and-pay > * {
 		margin: 5px;
+   }
+   .desc-container {
+		position: relative;
+		display: flex;
+		max-width: 1280px;
+		margin: 0 auto;
+		margin-top: calc(var(--from-top));
+   }
+   .pricing {
+		position: relative;
+	
+		max-width: 600px;
+		margin: 0 auto;
+		margin-top: calc(var(--from-top));
+		padding: 55px;
+		border-radius: 10px;
+		background: linear-gradient(68deg, rgba(248, 240, 234, 0.80) 31.32%, rgba(170, 182, 194, 0.80) 92.22%);
+		
+   }
+   .pricing p {
+		color: #083862;
+		line-height: 45px;
+   }
+   .terms {
+		max-width: 300px;
+		margin: 15px auto;
+   }
+   .terms p {
+		font-size: 12px;
    }
   }
 </style>
