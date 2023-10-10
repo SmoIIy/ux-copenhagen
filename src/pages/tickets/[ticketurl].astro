@@ -1,13 +1,15 @@
 ---
 export async function getStaticPaths() {
+	//Fetch database info
   const data = await fetch(
     "https://hnrcndxoquhelmpaqheh.supabase.co/rest/v1/uxcopenhagen", {
 	method: "GET",
 	headers: {
 	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhucmNuZHhvcXVoZWxtcGFxaGVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTM4MjI5MTksImV4cCI6MjAwOTM5ODkxOX0.Kj0vgWH3imfxSBjrhKN9746mppt3v9ldhd1y2ugyfyc"
 	},
+	//parse to json
 }).then(response => response.json());
-
+	//function to create static path based on ticketurl value in database
   return data.map((data) => {
     return {
       params: { ticketurl: data.ticketurl },
