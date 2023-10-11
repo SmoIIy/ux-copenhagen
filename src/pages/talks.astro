@@ -23,7 +23,7 @@ import Footer from '../components/Footer.astro';
         <p>In case you missed out - or want to check out more from us - some of the talks from previous years are available on our YouTube channel for free viewing. </p>
 
         </div>
-        <p>Full recordings, including Q&A sessions and  talks not found on YouTube are available for purchase – please visit our shop for more information.</p>
+        <p>Full recordings, including Q&A sessions and  talks not found on YouTube are available for purchase - please visit our shop for more information.</p>
         </div>
 </section>
 <section class="youtube-article">
@@ -40,7 +40,9 @@ import Footer from '../components/Footer.astro';
 
 <style>
     .text{
-        margin: 8% 0% 0% 15%;
+        /*margin: 8% 0% 0% 15%; */
+        max-width: 1080px;
+        margin: 8% auto ;
     }
 
         p{
@@ -49,7 +51,7 @@ import Footer from '../components/Footer.astro';
 
     .previous_talks{
         display: flex;
-        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
         gap: 8%;
         margin-bottom: 5%;
     }
@@ -79,6 +81,12 @@ import Footer from '../components/Footer.astro';
     height: 70%; /* Adjust the height as needed */
     position: absolute;
     top: 5%;
+}
+a {
+    transition: all 400ms ease;
+}
+a:hover {
+    color: var(--accent-yellow);
 }
 
 </style>
