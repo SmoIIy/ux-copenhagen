@@ -17,10 +17,13 @@ import Footer from '../components/Footer.astro';
 <Watermark />
 
 <div class="text">
-    <h3>Who are <span class="highlight">we</span></h3>
     <div class="img_grid">
+        <div>
+            <h3>Who are <span class="highlight">we</span></h3>
         <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
-        <img src="/helle_lone.png" alt="Two ladies">
+        
+        </div>
+        <img src="/helle_lone.png" class="helle_lone" alt="Two ladies">
     </div>
 </div>
 
@@ -70,21 +73,22 @@ import Footer from '../components/Footer.astro';
             </div>
         </div>
     </div>
- </div>
-<div class="box_grid">
+    <div class="box_grid">
         <div class="box">
         <p> The conference has about <strong>200 participants</strong> of whom <strong>76%</strong> are international.</p>
         </div>
         <div class="box">
-        <p> <strong>25%</strong> are managers (UX Lead, Head of Design, Head of Software Development, etc.). </p>
+        <p> <strong>25%</strong> are <strong>managers</strong> (UX Lead, Head of Design, Head of Software Development, etc.). </p>
         </div>
         <div class="box">
-        <p>50% of the audience are “UX Designers” (interaction designers, service designers, UI designers, content designers etc.) </p>
+        <p><strong>50%</strong> of the audience are <strong>“UX Designers”</strong> (interaction designers, service designers, UI designers, content designers etc.) </p>
         </div>
         <div class="box">
-        <p>The rest are marketing folks, graphical designers, and other creatives. It's a great networking event with a really wonderful crowd of participants and speakers.</p>
+        <p>The rest are marketing folks, graphical designers, and other creatives. <strong>An excellent networking event with an amazing crowd of participants and speakers.</strong></p>
         </div>
 </div>
+ </div>
+
 <div class="text">
     <h3>Online<span class="highlight"> networking</span> and <span class="highlight">interaction</span></h3>
     <div class="text_grid">
@@ -101,12 +105,35 @@ import Footer from '../components/Footer.astro';
         <p>In 2020, we also started a new initiative: a series of conversations with what we call “Conversations with UX Copenhagen”.</p>
         </div>
 </div>
+</div>
+
+<!-- <div class="text">
+    <div class="img_grid">
+        <div>
+            <h3> <span class="highlight">Where</span></h3>
+        <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
+        
+        </div>
+        <img src="/UX_map.svg" class="helle_lone" alt="Two ladies">
+    </div>
+</div>
+ -->
+
+    <div class="map_grid">
+        <div class="text">
+            <h3> <span class="highlight">Where</span></h3>
+            <p>The venue will be <strong><u>Big Bio Nordhavn, Hamborg Plads 6 in Nordhavn</u></strong>. 
+            </p>
+            <p>It’s a short walk from Nordhavn Metro station, and a few minutes more to Nordhavn train station.</p>
+         </div>
+ </div>
+
 
 
 <Footer/>
 <style>
     .text{
-        margin: 10% 0% 0% 15%;
+        margin: 8% 0% 0% 15%;
     }
     .text_grid{
         display: flex;
@@ -129,18 +156,16 @@ import Footer from '../components/Footer.astro';
     }
 
     .box p{
-        color: #072B4E;
-
-        padding: 6% 15% 5% 15%;
-
-         main
+        color: #072B4E;   
+        font-size: large;
+        text-align: center;
     }
 
     .box{
         border-radius: 18px;
         background: rgba(249, 248, 243, 0.78);
         box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
-        padding: 10%;
+        padding: 8%;
         margin: 5% 7% 0% 7%;
     }
 
@@ -155,7 +180,7 @@ import Footer from '../components/Footer.astro';
         overflow: hidden;
         margin-left: -19%;
         padding-right: 30%;
-        width: 105%;
+        width: 120%;
         margin-top: 5%;
         z-index: -1;
 }
@@ -171,13 +196,25 @@ import Footer from '../components/Footer.astro';
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5%;
-        margin: 5% 18% 5% 18%;
+        margin-bottom: 5%;
     }
 
     .img_grid{
-        display:grid;
-
+        display:flex;
+        gap: 10%;
+        align-items: center;
     }
+
+    .helle_lone{
+        width: 47%;
+    }
+
+.map_grid {
+    display: flex;
+    height: 480px;
+    background: linear-gradient(to bottom right, rgb(7, 42, 73), rgba(255, 255, 255, 0)), url(UX_map.png);
+    background-size: cover;
+}
 
     .footer{
         margin: auto;
