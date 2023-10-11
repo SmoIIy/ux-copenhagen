@@ -17,7 +17,6 @@ import Footer from '../components/Footer.astro';
 <Watermark />
 
 <div class="text">
-
     <div class="img_grid">
         <div>
             <h3>Who are <span class="highlight">we</span></h3>
@@ -74,21 +73,22 @@ import Footer from '../components/Footer.astro';
             </div>
         </div>
     </div>
- </div>
-<div class="box_grid">
+    <div class="box_grid">
         <div class="box">
         <p> The conference has about <strong>200 participants</strong> of whom <strong>76%</strong> are international.</p>
         </div>
         <div class="box">
-        <p> <strong>25%</strong> are managers (UX Lead, Head of Design, Head of Software Development, etc.). </p>
+        <p> <strong>25%</strong> are <strong>managers</strong> (UX Lead, Head of Design, Head of Software Development, etc.). </p>
         </div>
         <div class="box">
-        <p>50% of the audience are “UX Designers” (interaction designers, service designers, UI designers, content designers etc.) </p>
+        <p><strong>50%</strong> of the audience are <strong>“UX Designers”</strong> (interaction designers, service designers, UI designers, content designers etc.) </p>
         </div>
         <div class="box">
-        <p>The rest are marketing folks, graphical designers, and other creatives. It's a great networking event with a really wonderful crowd of participants and speakers.</p>
+        <p>The rest are marketing folks, graphical designers, and other creatives. <strong>An excellent networking event with an amazing crowd of participants and speakers.</strong></p>
         </div>
 </div>
+ </div>
+
 <div class="text">
     <h3>Online<span class="highlight"> networking</span> and <span class="highlight">interaction</span></h3>
     <div class="text_grid">
@@ -111,7 +111,7 @@ import Footer from '../components/Footer.astro';
 <Footer/>
 <style>
     .text{
-        margin: 10% 0% 0% 15%;
+        margin: 8% 0% 0% 15%;
     }
     .text_grid{
         display: flex;
@@ -134,18 +134,16 @@ import Footer from '../components/Footer.astro';
     }
 
     .box p{
-        color: #072B4E;
-
-        padding: 6% 15% 5% 15%;
-
-         main
+        color: #072B4E;   
+        font-size: large;
+        text-align: center;
     }
 
     .box{
         border-radius: 18px;
         background: rgba(249, 248, 243, 0.78);
         box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.25);
-        padding: 10%;
+        padding: 8%;
         margin: 5% 7% 0% 7%;
     }
 
@@ -176,7 +174,7 @@ import Footer from '../components/Footer.astro';
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5%;
-        margin: 5% 18% 5% 18%;
+        margin-bottom: 5%;
     }
 
     .img_grid{
