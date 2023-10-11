@@ -44,3 +44,16 @@ h3 {
 h1 {
   font-size: 3vw;
 }
+@media (max-width: 768px) {
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+  h3 {
+    font-size: 7vw;
+    margin-bottom: 1%;
+  }
+}

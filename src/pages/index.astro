@@ -155,4 +155,65 @@ const data = await response.json();
 	width: 100%;
 
 }
+@media (max-width: 768px){
+	#theme {
+	/* color: rgba(8, 62, 113, 0.7); */
+	font-size: 8vw;
+}
+.cover {
+		margin: 0;
+		width: 100%;
+		position: relative;
+		height: 75vh;
+	}
+	.cover-container {
+		position: relative;
+		top: 80px;
+		margin:  20px auto;
+		place-items: center;
+		max-width: 768px;
+	}
+	.cover h1 {
+		z-index: 2;
+		place-self: grid;
+		line-height: normal;
+	}
+	.coverimage {
+		width: 120%;
+		position: absolute;
+		object-fit: cover;
+		z-index: 0;
+		mask-image: linear-gradient(149deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%); 
+
+}
+.theme-container {
+		padding: 15px;
+		text-align: right;
+		grid-column: 2;
+		grid-row: 2;
+		z-index: 2;
+	}
+	.what-is {
+		position: relative;
+		min-height: 200px;
+		display: grid;
+		max-width: 768px;
+		margin: 0 auto;
+		z-index: 2;
+	}
+	.theme-article {
+		position: relative;
+		min-height: 200px;
+		display: grid;
+		max-width: 768px;
+		margin: 0 auto;
+		z-index: 2;
+		place-items: center;
+		gap: 50px;
+	}
+	.theme-article img {
+		place-self: center;
+		width: 80%;
+	}
+}
 </style>
