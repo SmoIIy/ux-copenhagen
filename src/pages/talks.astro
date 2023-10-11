@@ -1,0 +1,84 @@
+
+
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import '../style.css'
+import Watermark from '../components/Watermark.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="UX Copenhagen - about">
+    
+    <Header> 
+    </Header>
+</Layout>
+<Watermark />
+
+<section class="text">
+    <h3><span class="highlight">Previous talks</span></h3>
+    <div class="previous_talks">
+        <div>
+        <p>In case you missed out - or want to check out more from us - some of the talks from previous years are available on our YouTube channel for free viewing. </p>
+
+        </div>
+        <p>Full recordings, including Q&A sessions and  talks not found on YouTube are available for purchase – please visit our shop for more information.</p>
+        </div>
+</section>
+<section class="youtube-article">
+		<img src="/youtube.svg" class="youtube_svg" alt="youtube icon">
+        <a href="https://www.youtube.com/@UXCopenhagen">Check out our Youtube channel</a>
+</section>
+
+<section class="video-container">
+    <iframe class="video" src="https://www.youtube.com/embed/r9DaIn9YT4w?si=Nj8lV5ZnTc86Fdzm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+
+
+<Footer/>
+
+<style>
+    .text{
+        margin: 8% 0% 0% 15%;
+    }
+
+        p{
+        max-width: 420px;
+    }
+
+    .previous_talks{
+        display: flex;
+        grid-template-rows: 1fr 1fr;
+        gap: 8%;
+        margin-bottom: 5%;
+    }
+
+    .youtube-article {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px;
+}
+
+    .youtube_svg{
+        width: 38px;
+    }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40%; /* 16:9 aspect ratio */
+    position: relative;
+    height: 0;
+}
+
+.video {
+    width: 70%;
+    height: 70%; /* Adjust the height as needed */
+    position: absolute;
+    top: 5%;
+}
+
+</style>
