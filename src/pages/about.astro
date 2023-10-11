@@ -107,6 +107,28 @@ import Footer from '../components/Footer.astro';
 </div>
 </div>
 
+<!-- <div class="text">
+    <div class="img_grid">
+        <div>
+            <h3> <span class="highlight">Where</span></h3>
+        <p>In 2014, Helle Martens, inspired by a twist of fate, launched the conference after an accident left her jobless. Within a year, her idea of hosting a UX and design conference became a reality, with 144 tickets sold for the inaugural event in March 2015. </p>
+        
+        </div>
+        <img src="/UX_map.svg" class="helle_lone" alt="Two ladies">
+    </div>
+</div>
+ -->
+
+    <div class="map_grid">
+        <div class="text">
+            <h3> <span class="highlight">Where</span></h3>
+            <p>The venue will be <strong><u>Big Bio Nordhavn, Hamborg Plads 6 in Nordhavn</u></strong>. 
+            </p>
+            <p>It’s a short walk from Nordhavn Metro station, and a few minutes more to Nordhavn train station.</p>
+         </div>
+ </div>
+
+
 
 <Footer/>
 <style>
@@ -186,6 +208,13 @@ import Footer from '../components/Footer.astro';
     .helle_lone{
         width: 47%;
     }
+
+.map_grid {
+    display: flex;
+    height: 480px;
+    background: linear-gradient(to bottom right, rgb(7, 42, 73), rgba(255, 255, 255, 0)), url(UX_map.png);
+    background-size: cover;
+}
 
     .footer{
         margin: auto;
