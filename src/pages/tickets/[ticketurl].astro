@@ -27,6 +27,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Ticketmain from '../../components/Ticketmain.astro';
 import Button from '../../components/Button.astro';
+import Watermark from '../../components/Watermark.astro';
 ---
 
 
@@ -37,6 +38,7 @@ import Button from '../../components/Button.astro';
 
 <Layout title={data.title}>
   <Header />
+  <Watermark />
   <section class="ticket-container">
     <article class="row">
       <Ticketmain data={data}/>
