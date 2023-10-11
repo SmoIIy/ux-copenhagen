@@ -27,7 +27,7 @@ const data = await response.json();
 	</Header>
 
 	<section class="cover">
-		<img src="/coverimage.png" alt="image of conference" class="coverimage">
+		<img src="/coverimageseats.png" alt="image of conference" class="coverimage">
 		<div class="cover-container">
 			<h1><span class="highlight">UX Copenhagen</span> is Denmark's most inspirational human experience conference!</h1>
 			<div class="theme-container">
@@ -36,7 +36,7 @@ const data = await response.json();
 				<h1>20<span class="highlight">24</span></h1>
 				<br>
 				<p>This years theme</p>
-				<h1 id="theme">Degrowth & Consumerism</h1>
+				<h1 id="theme"><span style="color: white;">Degrowth & Consumerism</span></h1>
 			</div>
 		</div>
 	</section>
@@ -108,7 +108,10 @@ const data = await response.json();
 		position: absolute;
 		object-fit: cover;
 		z-index: 0;
-		mask-image: linear-gradient(149deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%); 
+		mask-image: url("/icons/backgroundsvgshape1.svg");
+		mask-position: 0 75%;
+		mask-size: 100% 200%;
+
 
 	}
 	.theme-container {

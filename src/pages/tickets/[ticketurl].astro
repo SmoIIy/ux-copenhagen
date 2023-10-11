@@ -44,20 +44,24 @@ import Watermark from '../../components/Watermark.astro';
       <Ticketmain data={data}/>
     </article>
     <article class="row">
-		<h1><span class="highlight">UX Copenhagen 2024 </span>“Consumerism & Degrowth”: Full event ticket</h1>
-		<div class="ticket-body">
+		<h1><span class="highlight">UX Copenhagen 2024 </span>“Consumerism & Degrowth”: {data.title}</h1>
+		<div set:html={data.ticket_page_content} class="ticket-body">
+			<!-- 
 			<h4>Tickets include:</h4>
 			<ul>
-				<li>Full access to the recording of the 2023 conference</li>
-				<li>Access to all talks </li>
-				<li>Q&A sessions </li>
-				<li>Recordings of 2-3 of the workshops for a discounted price</li>
+
+				<li>Full access to the recording of the 2023 conference </li>
+				<li>Access to all talks  </li>
+				<li>Q&A sessions  </li>
+				<li>Recordings of 2-3 of the workshops for a discounted price </li>
+				
+
 			</ul>
-			<p>Please note that the livestream ticket is not refundable</p>
+			<p>Please note that the livestream ticket is not refundable</p>-->
 		</div>
 		<div class="price-and-pay">
 			<p>Price:</p>
-			<p>{data.price}</p>
+			<h3>DKK: {data.price}</h3>
 			<form action=""></form>
 			<Button href="#" variant="filled">Add to Card</Button>
 		</div>
@@ -65,22 +69,18 @@ import Watermark from '../../components/Watermark.astro';
   </section>
 
   <section class="desc-container">
-    <div id="desc-container-left">
+    <div  id="desc-container-left">
 		<h2>Description</h2>
 		<p>
-			This ticket is for joining us live in Copenhagen on March 20-21, 2024. There will be an excellent line-up of live and online speakers; live Q&A sessions; 2-3 hands-on workshops to choose from each day; live and online Round Table sessions with current and previous speakers; food, drinks, and snacks throughout both days; a goodie-bag; access to our groups on Slack and other social media platforms; and access to the full recording of the live-stream for three months after the event (until June 30, 2024).
-			This ticket also includes access to some of the events surrounding the conference (to be announced later), and our dinner party on Wednesday, March 20th.
+			{data.ticket_page_description_p1}
 			</p>
 	</div>
     <div id="disc-container-right">
-		<p>For 2024, our presenters will be exploring the topic of “Consumerism & Degrowth”. There will be talks on new ways of farming like urban agriculture, new shopping experiences, designing for “The Third Age”/ageism, and sustainability.
-
-			Our speakers and our participants are a fantastic mixture of international and local UX and design experts, marketing professionals, digital managers, designers, innovators, strategists, researchers, and others curious about the field. Join us for two days filled with interaction, inspiration, networking, and new knowledge and insights.
-			
-			If you have any questions, please reach out to hello@uxcopenhagen.com.</p>
+		<p>{data.ticket_page_description_p2}</p>
 	</div>
 
   </section>
+
 
   <section class="pricing">
     <div class="pricing-container">
@@ -127,15 +127,17 @@ import Watermark from '../../components/Watermark.astro';
 		align-items: flex-start;
 		justify-content: center;
 		padding: 15px;
-
-
+   }
+   .row h1 {
+		font-size: 2.2vw;
+		line-height: 5vh;
    }
    	.price-and-pay {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: left;
 		place-self: left;
-		margin-left: 40px;
    }
    .price-and-pay > * {
 		margin: 5px;
@@ -147,9 +149,11 @@ import Watermark from '../../components/Watermark.astro';
 		margin: 0 auto;
 		margin-top: calc(var(--from-top));
    }
+   .desc-container > * {
+		padding: 45px;
+   }
    .pricing {
 		position: relative;
-	
 		max-width: 600px;
 		margin: 0 auto;
 		margin-top: calc(var(--from-top));
